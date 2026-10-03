@@ -435,7 +435,7 @@ export const Sidebar: React.FC<SidebarProps> = ({
               const isSelected = item.topicId === selectedTopicId;
               const record = getAssessmentRecord(item.topicId);
               const attemptsCount = Object.keys(record.attempts).length;
-              const correctCount = Object.values(record.attempts).filter((a) => a.isCorrect).length;
+              const correctCount = Object.values(record.attempts).filter((a: any) => Boolean(a?.isCorrect)).length;
               const incorrectCount = attemptsCount - correctCount;
 
               const pct = Math.round((attemptsCount / 25) * 100);
