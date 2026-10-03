@@ -173,11 +173,7 @@ export const TopicDetail: React.FC<TopicDetailProps> = ({
       {/* Topic Header Card - Standalone container with isolated audio button */}
       <div
         id={`topic-header-${topic.id}`}
-        className="rounded-2xl border p-5 sm:p-7 relative overflow-hidden shadow-xs space-y-4 tactile-card"
-        style={{
-          backgroundColor: 'var(--bg-card)',
-          borderColor: 'var(--border-card)',
-        }}
+        className="rounded-2xl border p-5 sm:p-7 relative overflow-hidden shadow-sm space-y-4 tactile-card vibrant-card-banner"
       >
         <div className="space-y-3">
           {/* Top Row: Unboxed editorial metadata & Audio indicator */}

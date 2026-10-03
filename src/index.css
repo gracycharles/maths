@@ -2,24 +2,24 @@
 
 @layer base {
   :root {
-    --bg-canvas: #fbf9f4;
+    --bg-canvas: #f8fafc;
     --bg-card: #ffffff;
-    --bg-card-subtle: #f7f1e6;
-    --border-card: #ebdcc8;
-    --border-card-strong: #c8b18a;
+    --bg-card-subtle: #f1f5f9;
+    --border-card: #e2e8f0;
+    --border-card-strong: #cbd5e1;
     --text-primary: #0f172a;
     --text-secondary: #334155;
     --text-muted: #64748b;
-    --accent-primary: #b45309;
+    --accent-primary: #d97706;
     --accent-contrast: #ffffff;
-    --accent-soft: rgba(180, 83, 9, 0.12);
-    --badge-bg: rgba(180, 83, 9, 0.12);
+    --accent-soft: rgba(217, 119, 6, 0.12);
+    --badge-bg: #fef3c7;
     --badge-text: #92400e;
-    --badge-border: rgba(180, 83, 9, 0.28);
-    --btn-primary-bg: #b45309;
+    --badge-border: #fde68a;
+    --btn-primary-bg: #d97706;
     --btn-primary-text: #ffffff;
-    --btn-primary-hover: #92400e;
-    --reading-highlight-bg: #fdf3d8;
+    --btn-primary-hover: #b45309;
+    --reading-highlight-bg: #fef3c7;
     --reading-highlight-border: #f59e0b;
     --reading-highlight-text: #78350f;
 
@@ -51,10 +51,16 @@
     --font-active: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
   }
 
-  body, html, #root, button, input, select, textarea {
+  body {
     font-family: var(--font-active) !important;
-    background-color: var(--bg-canvas);
+    background: linear-gradient(135deg, #f0f9ff 0%, #fefce8 40%, #f0fdf4 75%, #faf5ff 100%);
+    background-attachment: fixed;
     color: var(--text-primary);
+    min-height: 100vh;
+  }
+
+  html, #root, button, input, select, textarea {
+    font-family: var(--font-active) !important;
   }
 
   /* Monospace override for formulas and code */
@@ -91,9 +97,21 @@
 }
 
 .kid-gradient-text {
-  background: linear-gradient(135deg, #b45309 0%, #d97706 50%, #047857 100%);
+  background: linear-gradient(135deg, #2563eb 0%, #7c3aed 50%, #db2777 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+
+/* Rainbow Border & Gradient Accent Utilities */
+.vibrant-card-banner {
+  background: linear-gradient(135deg, #ffffff 0%, #fef3c7 50%, #f0fdf4 100%);
+  border: 2px solid #fde68a;
+  box-shadow: 0 4px 20px -2px rgba(245, 158, 11, 0.12);
+}
+
+.vibrant-header-bar {
+  background: rgba(255, 255, 255, 0.92);
+  border-bottom: 2px solid #f1f5f9;
 }
 
 /* Custom interactive utility styles */
@@ -112,6 +130,6 @@
   background: transparent;
 }
 .custom-scrollbar::-webkit-scrollbar-thumb {
-  background: var(--border-card-strong);
+  background: #cbd5e1;
   border-radius: 9999px;
 }

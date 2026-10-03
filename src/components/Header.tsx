@@ -78,7 +78,7 @@ export const Header: React.FC<HeaderProps> = ({
 
   return (
     <header
-      className="sticky top-0 z-30 backdrop-blur-xl border-b shadow-xs transition-colors"
+      className="sticky top-0 z-50 backdrop-blur-xl border-b shadow-xs transition-colors"
       style={{
         backgroundColor: 'var(--bg-card)',
         borderColor: 'var(--border-card-strong)',
