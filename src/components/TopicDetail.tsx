@@ -123,7 +123,13 @@ export const TopicDetail: React.FC<TopicDetailProps> = ({
     }
   }, [targetSectionId, topic.id]);
 
+  const handleTabChange = (newTab: TabType) => {
+    soundEffects.playTabSound();
+    setActiveTab(newTab);
+  };
+
   const toggleExample = (id: string) => {
+    soundEffects.playClickSound();
     setExpandedExamples((prev) => ({ ...prev, [id]: !prev[id] }));
   };
 
@@ -222,12 +228,12 @@ export const TopicDetail: React.FC<TopicDetailProps> = ({
         >
           <button
             type="button"
-            onClick={() => setActiveTab('theory')}
+            onClick={() => handleTabChange('theory')}
             className="flex items-center gap-1.5 px-3.5 py-2 rounded-xl text-xs sm:text-sm font-bold transition-all cursor-pointer border shadow-2xs tactile-btn"
             style={{
-              backgroundColor: activeTab === 'theory' ? 'var(--accent-primary)' : 'var(--bg-card-subtle)',
-              borderColor: activeTab === 'theory' ? 'var(--accent-primary)' : 'var(--border-card)',
-              color: activeTab === 'theory' ? 'var(--accent-contrast)' : 'var(--text-primary)',
+              backgroundColor: activeTab === 'theory' ? '#0d9488' : '#f0fdf4',
+              borderColor: activeTab === 'theory' ? '#0f766e' : '#99f6e4',
+              color: activeTab === 'theory' ? '#ffffff' : '#0f766e',
             }}
           >
             <BookOpen size={16} />
@@ -238,12 +244,12 @@ export const TopicDetail: React.FC<TopicDetailProps> = ({
             <button
               type="button"
               id="tab-topic-video-btn"
-              onClick={() => setActiveTab('video')}
+              onClick={() => handleTabChange('video')}
               className="flex items-center gap-1.5 px-3.5 py-2 rounded-xl text-xs sm:text-sm font-bold transition-all cursor-pointer border shadow-2xs relative tactile-btn"
               style={{
-                backgroundColor: activeTab === 'video' ? 'var(--accent-primary)' : 'var(--bg-card-subtle)',
-                borderColor: activeTab === 'video' ? 'var(--accent-primary)' : 'var(--border-card)',
-                color: activeTab === 'video' ? 'var(--accent-contrast)' : 'var(--text-primary)',
+                backgroundColor: activeTab === 'video' ? '#e11d48' : '#fff1f2',
+                borderColor: activeTab === 'video' ? '#be123c' : '#fecdd3',
+                color: activeTab === 'video' ? '#ffffff' : '#be123c',
               }}
               title="Video Lesson"
             >
@@ -254,12 +260,12 @@ export const TopicDetail: React.FC<TopicDetailProps> = ({
 
           <button
             type="button"
-            onClick={() => setActiveTab('tips')}
+            onClick={() => handleTabChange('tips')}
             className="flex items-center gap-1.5 px-3.5 py-2 rounded-xl text-xs sm:text-sm font-bold transition-all cursor-pointer border shadow-2xs tactile-btn"
             style={{
-              backgroundColor: activeTab === 'tips' ? 'var(--accent-primary)' : 'var(--bg-card-subtle)',
-              borderColor: activeTab === 'tips' ? 'var(--accent-primary)' : 'var(--border-card)',
-              color: activeTab === 'tips' ? 'var(--accent-contrast)' : 'var(--text-primary)',
+              backgroundColor: activeTab === 'tips' ? '#4f46e5' : '#eef2ff',
+              borderColor: activeTab === 'tips' ? '#3730a3' : '#c7d2fe',
+              color: activeTab === 'tips' ? '#ffffff' : '#3730a3',
             }}
           >
             <Sparkles size={16} />
@@ -268,12 +274,12 @@ export const TopicDetail: React.FC<TopicDetailProps> = ({
 
           <button
             type="button"
-            onClick={() => setActiveTab('formulas')}
+            onClick={() => handleTabChange('formulas')}
             className="flex items-center gap-1.5 px-3.5 py-2 rounded-xl text-xs sm:text-sm font-bold transition-all cursor-pointer border shadow-2xs tactile-btn"
             style={{
-              backgroundColor: activeTab === 'formulas' ? 'var(--accent-primary)' : 'var(--bg-card-subtle)',
-              borderColor: activeTab === 'formulas' ? 'var(--accent-primary)' : 'var(--border-card)',
-              color: activeTab === 'formulas' ? 'var(--accent-contrast)' : 'var(--text-primary)',
+              backgroundColor: activeTab === 'formulas' ? '#d97706' : '#fffbeb',
+              borderColor: activeTab === 'formulas' ? '#b45309' : '#fde68a',
+              color: activeTab === 'formulas' ? '#ffffff' : '#b45309',
             }}
           >
             <Award size={16} />
@@ -282,12 +288,12 @@ export const TopicDetail: React.FC<TopicDetailProps> = ({
 
           <button
             type="button"
-            onClick={() => setActiveTab('practice')}
+            onClick={() => handleTabChange('practice')}
             className="flex items-center gap-1.5 px-3.5 py-2 rounded-xl text-xs sm:text-sm font-bold transition-all cursor-pointer border shadow-2xs tactile-btn"
             style={{
-              backgroundColor: activeTab === 'practice' ? 'var(--accent-primary)' : 'var(--bg-card-subtle)',
-              borderColor: activeTab === 'practice' ? 'var(--accent-primary)' : 'var(--border-card)',
-              color: activeTab === 'practice' ? 'var(--accent-contrast)' : 'var(--text-primary)',
+              backgroundColor: activeTab === 'practice' ? '#059669' : '#ecfdf5',
+              borderColor: activeTab === 'practice' ? '#047857' : '#a7f3d0',
+              color: activeTab === 'practice' ? '#ffffff' : '#047857',
             }}
           >
             <GraduationCap size={16} />
@@ -297,12 +303,12 @@ export const TopicDetail: React.FC<TopicDetailProps> = ({
           {topic.toolType && (
             <button
               type="button"
-              onClick={() => setActiveTab('tools')}
+              onClick={() => handleTabChange('tools')}
               className="flex items-center gap-1.5 px-3.5 py-2 rounded-xl text-xs sm:text-sm font-bold transition-all cursor-pointer border shadow-2xs tactile-btn"
               style={{
-                backgroundColor: activeTab === 'tools' ? 'var(--accent-primary)' : 'var(--bg-card-subtle)',
-                borderColor: activeTab === 'tools' ? 'var(--accent-primary)' : 'var(--border-card)',
-                color: activeTab === 'tools' ? 'var(--accent-contrast)' : 'var(--text-primary)',
+                backgroundColor: activeTab === 'tools' ? '#0284c7' : '#f0f9ff',
+                borderColor: activeTab === 'tools' ? '#0369a1' : '#bae6fd',
+                color: activeTab === 'tools' ? '#ffffff' : '#0369a1',
               }}
             >
               <Cpu size={16} />
@@ -314,12 +320,12 @@ export const TopicDetail: React.FC<TopicDetailProps> = ({
             <button
               type="button"
               id="tab-topic-assessment-btn"
-              onClick={() => setActiveTab('assessment')}
+              onClick={() => handleTabChange('assessment')}
               className="flex items-center gap-1.5 px-3.5 py-2 rounded-xl text-xs sm:text-sm font-bold transition-all cursor-pointer border shadow-2xs relative tactile-btn"
               style={{
-                backgroundColor: activeTab === 'assessment' ? 'var(--accent-primary)' : 'var(--bg-card-subtle)',
-                borderColor: activeTab === 'assessment' ? 'var(--accent-primary)' : 'var(--border-card)',
-                color: activeTab === 'assessment' ? 'var(--accent-contrast)' : 'var(--text-primary)',
+                backgroundColor: activeTab === 'assessment' ? '#7c3aed' : '#faf5ff',
+                borderColor: activeTab === 'assessment' ? '#6d28d9' : '#e9d5ff',
+                color: activeTab === 'assessment' ? '#ffffff' : '#6d28d9',
               }}
             >
               <Award size={16} />

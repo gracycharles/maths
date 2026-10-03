@@ -63,6 +63,39 @@
   }
 }
 
+/* Kid-Friendly Vibrant Colorful Badges & Highlights */
+.kid-badge-yellow {
+  background-color: #fef3c7;
+  color: #92400e;
+  border-color: #fde68a;
+}
+.kid-badge-mint {
+  background-color: #d1fae5;
+  color: #065f46;
+  border-color: #a7f3d0;
+}
+.kid-badge-rose {
+  background-color: #ffe4e6;
+  color: #9f1239;
+  border-color: #fecdd3;
+}
+.kid-badge-sky {
+  background-color: #e0f2fe;
+  color: #075985;
+  border-color: #bae6fd;
+}
+.kid-badge-purple {
+  background-color: #f3e8ff;
+  color: #6b21a8;
+  border-color: #e9d5ff;
+}
+
+.kid-gradient-text {
+  background: linear-gradient(135deg, #b45309 0%, #d97706 50%, #047857 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
 /* Custom interactive utility styles */
 .tactile-btn {
   transition: all 0.15s cubic-bezier(0.4, 0, 0.2, 1);

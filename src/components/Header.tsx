@@ -249,16 +249,42 @@ export const Header: React.FC<HeaderProps> = ({
               {modes.map((m) => {
                 const IconComponent = m.icon;
                 const isSelected = activeMode === m.id;
+
+                const getModeColorStyle = () => {
+                  if (!isSelected) {
+                    return {
+                      backgroundColor: 'transparent',
+                      color: 'var(--text-secondary)',
+                      borderColor: 'transparent',
+                    };
+                  }
+                  switch (m.id) {
+                    case 'learn':
+                      return { backgroundColor: '#0d9488', color: '#ffffff', borderColor: '#0f766e' };
+                    case 'video':
+                      return { backgroundColor: '#e11d48', color: '#ffffff', borderColor: '#be123c' };
+                    case 'tools':
+                      return { backgroundColor: '#0284c7', color: '#ffffff', borderColor: '#0369a1' };
+                    case 'assessment':
+                      return { backgroundColor: '#7c3aed', color: '#ffffff', borderColor: '#6d28d9' };
+                    default:
+                      return { backgroundColor: 'var(--accent-primary)', color: '#ffffff', borderColor: 'var(--accent-primary)' };
+                  }
+                };
+
+                const modeStyle = getModeColorStyle();
+
                 return (
                   <button
                     key={m.id}
                     type="button"
                     onClick={() => onSelectMode(m.id)}
-                    className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg font-bold text-xs whitespace-nowrap transition-all cursor-pointer tactile-btn"
+                    className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg font-extrabold text-xs whitespace-nowrap transition-all cursor-pointer tactile-btn border"
                     style={{
-                      backgroundColor: isSelected ? 'var(--accent-primary)' : 'transparent',
-                      color: isSelected ? 'var(--accent-contrast)' : 'var(--text-secondary)',
-                      boxShadow: isSelected ? '0 1px 3px rgba(0, 0, 0, 0.12)' : 'none',
+                      backgroundColor: modeStyle.backgroundColor,
+                      color: modeStyle.color,
+                      borderColor: modeStyle.borderColor,
+                      boxShadow: isSelected ? '0 2px 4px rgba(0, 0, 0, 0.12)' : 'none',
                     }}
                   >
                     <IconComponent size={14} />

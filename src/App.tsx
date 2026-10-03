@@ -10,10 +10,12 @@ import { TopicDetail } from '@/components/TopicDetail';
 import { AssessmentView } from '@/components/AssessmentView';
 import { QuickFormulaDrawer } from '@/components/QuickFormulaDrawer';
 import { QuickSearchModal } from '@/components/QuickSearchModal';
+import { LevelProgressBar } from '@/components/LevelProgressBar';
 import { GoToTop } from '@/components/GoToTop';
 import { FloatingAudioController } from '@/components/FloatingAudioController';
 import { allAssessments, getAssessmentForTopic } from '@/data/assessments';
 import { wakeLockController } from '@/utils/wakeLock';
+import { soundEffects } from '@/utils/soundEffects';
 
 export default function App() {
   const [selectedTopicId, setSelectedTopicId] = useState<string>('place-value-and-rounding');
@@ -41,6 +43,7 @@ export default function App() {
   }, []);
 
   const handleToggleDesktopSidebar = () => {
+    soundEffects.playClickSound();
     setIsDesktopSidebarOpen((prev) => {
       const next = !prev;
       if (typeof window !== 'undefined') {
@@ -96,6 +99,7 @@ export default function App() {
 
   // Handler for selecting year level
   const handleSelectYear = (year: YearLevel | 'All') => {
+    soundEffects.playTabSound();
     setSelectedYear(year);
 
     let matching = mathTopics.filter((t) => {
@@ -117,6 +121,7 @@ export default function App() {
 
   // Handler for selecting a topic directly
   const handleSelectTopicDirectly = (id: string, sectionId?: string) => {
+    soundEffects.playClickSound();
     const target = mathTopics.find((t) => t.id === id);
     if (target) {
       if (selectedCategory !== 'all' && target.category !== selectedCategory) {
@@ -137,6 +142,7 @@ export default function App() {
 
   // Handler for mode changes
   const handleSelectMode = (mode: NavModeType) => {
+    soundEffects.playTabSound();
     setSidebarMode(mode);
     if (mode === 'video') setActiveDetailTab('video');
     else if (mode === 'tools') setActiveDetailTab('tools');
@@ -146,6 +152,7 @@ export default function App() {
 
   // Handler for selecting an assessment directly
   const handleOpenAssessment = (topicId: string) => {
+    soundEffects.playTabSound();
     setSelectedTopicId(topicId);
     setSidebarMode('assessment');
     setActiveDetailTab('assessment');
@@ -167,22 +174,38 @@ export default function App() {
       <Header
         selectedYear={selectedYear}
         onSelectYear={handleSelectYear}
-        onOpenFormulaDrawer={() => setIsFormulaDrawerOpen(true)}
+        onOpenFormulaDrawer={() => {
+          soundEffects.playClickSound();
+          setIsFormulaDrawerOpen(true);
+        }}
         isMobileNavOpen={isMobileNavOpen}
-        onToggleMobileNav={() => setIsMobileNavOpen((prev) => !prev)}
+        onToggleMobileNav={() => {
+          soundEffects.playClickSound();
+          setIsMobileNavOpen((prev) => !prev);
+        }}
         isDesktopSidebarOpen={isDesktopSidebarOpen}
         onToggleDesktopSidebar={handleToggleDesktopSidebar}
         activeMode={sidebarMode}
         onSelectMode={handleSelectMode}
-        onOpenSearch={() => setIsSearchOpen(true)}
+        onOpenSearch={() => {
+          soundEffects.playClickSound();
+          setIsSearchOpen(true);
+        }}
       />
 
-      <div className="flex-1 max-w-7xl w-full mx-auto px-3 sm:px-6 lg:px-8 py-4 sm:py-6 pb-28 sm:pb-32 flex flex-col lg:flex-row gap-6 min-w-0 app-main-layout">
+      {/* Interactive Level Progress Bar */}
+      <LevelProgressBar
+        selectedYear={selectedYear}
+        onSelectYear={handleSelectYear}
+      />
+
+      <div className="flex-1 max-w-7xl w-full mx-auto px-3 sm:px-6 lg:px-8 py-3 sm:py-5 pb-28 sm:pb-32 flex flex-col lg:flex-row gap-6 min-w-0 app-main-layout">
         {/* Left Sidebar for Mobile, Tablet Landscape, & Desktop */}
         <Sidebar
           topics={filteredTopics}
           selectedTopicId={selectedTopicId}
           onSelectTopic={(id) => {
+            soundEffects.playClickSound();
             setSelectedTopicId(id);
             if (sidebarMode === 'video') setActiveDetailTab('video');
             else if (sidebarMode === 'tools') setActiveDetailTab('tools');
@@ -191,7 +214,10 @@ export default function App() {
             setTargetSectionId(null);
           }}
           selectedCategory={selectedCategory}
-          onSelectCategory={setSelectedCategory}
+          onSelectCategory={(cat) => {
+            soundEffects.playTabSound();
+            setSelectedCategory(cat);
+          }}
           isOpenOnMobile={isMobileNavOpen}
           onCloseMobile={() => setIsMobileNavOpen(false)}
           isDesktopOpen={isDesktopSidebarOpen}
@@ -221,7 +247,7 @@ export default function App() {
               >
                 <PanelLeftOpen size={15} style={{ color: 'var(--accent-primary)' }} />
                 <span>
-                  Show Topic Navigator ({sidebarMode === 'assessment' ? allAssessments.length : filteredTopics.length})
+                  Topics ({sidebarMode === 'assessment' ? allAssessments.length : filteredTopics.length})
                 </span>
               </button>
             </div>
