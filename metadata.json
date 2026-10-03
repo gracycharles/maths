@@ -1,0 +1,8 @@
+{
+  "name": "Remix MathMaster Pro",
+  "description": "Master advanced mathematics with interactive lessons, essential tips, and audio-supported explanations across all your mobile devices.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

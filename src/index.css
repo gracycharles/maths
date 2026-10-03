@@ -1,0 +1,84 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --bg-canvas: #fbf9f4;
+    --bg-card: #ffffff;
+    --bg-card-subtle: #f7f1e6;
+    --border-card: #ebdcc8;
+    --border-card-strong: #c8b18a;
+    --text-primary: #0f172a;
+    --text-secondary: #334155;
+    --text-muted: #64748b;
+    --accent-primary: #b45309;
+    --accent-contrast: #ffffff;
+    --accent-soft: rgba(180, 83, 9, 0.12);
+    --badge-bg: rgba(180, 83, 9, 0.12);
+    --badge-text: #92400e;
+    --badge-border: rgba(180, 83, 9, 0.28);
+    --btn-primary-bg: #b45309;
+    --btn-primary-text: #ffffff;
+    --btn-primary-hover: #92400e;
+    --reading-highlight-bg: #fdf3d8;
+    --reading-highlight-border: #f59e0b;
+    --reading-highlight-text: #78350f;
+
+    --font-active: 'Lexend', system-ui, -apple-system, sans-serif;
+  }
+
+  html[data-font-size="normal"] {
+    font-size: 16px;
+  }
+  html[data-font-size="large"] {
+    font-size: 18px;
+  }
+  html[data-font-size="xlarge"] {
+    font-size: 20px;
+  }
+
+  html[data-font-family="lexend"],
+  html[data-font-family="lexend"] * {
+    --font-active: 'Lexend', system-ui, -apple-system, sans-serif;
+  }
+
+  html[data-font-family="nunito"],
+  html[data-font-family="nunito"] * {
+    --font-active: 'Nunito', system-ui, -apple-system, sans-serif;
+  }
+
+  html[data-font-family="jakarta"],
+  html[data-font-family="jakarta"] * {
+    --font-active: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  }
+
+  body, html, #root, button, input, select, textarea {
+    font-family: var(--font-active) !important;
+    background-color: var(--bg-canvas);
+    color: var(--text-primary);
+  }
+
+  /* Monospace override for formulas and code */
+  code, kbd, samp, pre, .font-mono {
+    font-family: 'JetBrains Mono', monospace !important;
+  }
+}
+
+/* Custom interactive utility styles */
+.tactile-btn {
+  transition: all 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.tactile-btn:active {
+  transform: scale(0.97);
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: var(--border-card-strong);
+  border-radius: 9999px;
+}

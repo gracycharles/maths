@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  GitHub Actions Deployment Specification & Build Manifest for Maths Master
+  Triggers automatic CI/CD build & GitHub Pages publishing without blank screens.
+-->
+<deployment name="MathsMasterDeployment" version="1.0.0">
+  <trigger>
+    <branch>main</branch>
+    <branch>master</branch>
+    <workflowDispatch>true</workflowDispatch>
+  </trigger>
+  <environment>
+    <runtime>NodeJS</runtime>
+    <version>20.x</version>
+    <framework>Vite + React 19</framework>
+  </environment>
+  <build>
+    <command>npm ci &amp;&amp; npm run build</command>
+    <outputDirectory>dist</outputDirectory>
+    <basePath>./</basePath>
+    <assetHandling>relative</assetHandling>
+    <blankScreenPrevention>
+      <rule>Use relative base './' in vite.config.ts</rule>
+      <rule>Ensure KaTeX and CSS assets link relatively</rule>
+      <rule>Client-side routing fallback support</rule>
+    </blankScreenPrevention>
+  </build>
+  <target>
+    <provider>GitHub Pages</provider>
+    <artifactPath>./dist</artifactPath>
+  </target>
+</deployment>
