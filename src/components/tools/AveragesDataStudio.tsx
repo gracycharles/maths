@@ -1,10 +1,10 @@
 'use client';
 
 import React, { useState } from 'react';
-import { MathView } from '../MathView.tsx';
+import { MathView } from '../MathView';
 import { Sparkles, Info, RefreshCw, BarChart2 } from 'lucide-react';
-import { ReadableCard } from '../ReadableCard.tsx';
-import { AudioButton } from '../AudioButton.tsx';
+import { ReadableCard } from '../ReadableCard';
+import { AudioButton } from '../AudioButton';
 
 export const AveragesDataStudio: React.FC = () => {
   const [dataPoints, setDataPoints] = useState<number[]>([4, 7, 7, 8, 9, 10, 11]);

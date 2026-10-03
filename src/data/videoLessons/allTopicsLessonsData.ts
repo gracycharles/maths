@@ -1,4 +1,4 @@
-import { VideoLesson } from './types.ts';
+import { VideoLesson } from './types';
 
 /* =========================================================================
  * 1. PLACE VALUE, ROUNDING & NEGATIVE NUMBERS (5-Chapter Masterclass)

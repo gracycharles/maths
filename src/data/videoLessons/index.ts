@@ -1,26 +1,26 @@
-import { VideoLesson } from './types.ts';
-import { fractionsMasterclassLesson } from './fractionsLessonData.ts';
-import { multiplicationFactorsLesson } from './multiplicationFactorsLessonData.ts';
+import { VideoLesson } from './types';
+import { fractionsMasterclassLesson } from './fractionsLessonData';
+import { multiplicationFactorsLesson } from './multiplicationFactorsLessonData';
 import {
   placeValueLesson,
   decimalsPercentagesLesson,
   ratioLesson,
   bidmasLesson,
-} from './allTopicsLessonsData.ts';
+} from './allTopicsLessonsData';
 import {
   algebraLesson,
   measurementUnitsLesson,
   perimeterAreaVolumeLesson,
   geometryAnglesLesson,
   wordProblemsLesson,
-} from './allTopicsLessonsPart2.ts';
+} from './allTopicsLessonsPart2';
 import {
   coordinatesLesson,
   romanNumeralsLesson,
   averagesLesson,
-} from './allTopicsLessonsPart3.ts';
+} from './allTopicsLessonsPart3';
 
-export * from './types.ts';
+export * from './types';
 export { fractionsMasterclassLesson } from './fractionsLessonData';
 export { multiplicationFactorsLesson } from './multiplicationFactorsLessonData';
 export {

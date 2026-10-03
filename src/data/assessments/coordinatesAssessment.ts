@@ -1,4 +1,4 @@
-import { TopicAssessment } from '../../types/assessment.ts';
+import { TopicAssessment } from '../../types/assessment';
 
 export const coordinatesAssessment: TopicAssessment = {
   topicId: 'coordinates-and-reflection',

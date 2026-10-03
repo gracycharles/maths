@@ -1,4 +1,4 @@
-import { AssessmentRecord, QuestionUserAttempt } from '../types/assessment.ts';
+import { AssessmentRecord, QuestionUserAttempt } from '../types/assessment';
 
 const STORAGE_PREFIX = 'maths_master_assessment_';
 
@@ -74,8 +74,9 @@ export function saveQuestionAttempt(topicId: string, attempt: QuestionUserAttemp
     [attempt.questionId]: attempt,
   };
 
-  const correctCount = Object.values(updatedAttempts).filter((a) => a.isCorrect).length;
-  const wrongIds = Object.values(updatedAttempts)
+  const attemptsList = Object.values(updatedAttempts) as QuestionUserAttempt[];
+  const correctCount = attemptsList.filter((a) => a.isCorrect).length;
+  const wrongIds = attemptsList
     .filter((a) => !a.isCorrect)
     .map((a) => a.questionId);
 
@@ -122,7 +123,7 @@ export function getCompletedAssessmentTopicIds(): string[] {
 
 export function calculateAssessmentStats(topicId: string, customRecord?: AssessmentRecord) {
   const record = customRecord || getAssessmentRecord(topicId);
-  const attempts = Object.values(record.attempts || {});
+  const attempts = Object.values(record.attempts || {}) as QuestionUserAttempt[];
   const totalQuestions = record.totalQuestions || 25;
   const completedCount = attempts.length;
   const correctCount = attempts.filter((a) => a.isCorrect).length;

@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react';
 import { Sparkles } from 'lucide-react';
-import { ReadableCard } from '../ReadableCard.tsx';
+import { ReadableCard } from '../ReadableCard';
 
 export const RomanNumeralsConverter: React.FC = () => {
   const [numInput, setNumInput] = useState<number>(2024);

@@ -1,10 +1,10 @@
 'use client';
 
 import React, { useState } from 'react';
-import { MathView } from '../MathView.tsx';
+import { MathView } from '../MathView';
 import { Check, X, ArrowRight, Sparkles, RefreshCw, AlertTriangle, Layers, Award, GitCompare, HelpCircle } from 'lucide-react';
-import { VideoChapter, VideoLesson, WhiteboardType } from '../../data/videoLessons/types.ts';
-import { ExpandedWhiteboardScenes } from './ExpandedWhiteboardScenes.tsx';
+import { VideoChapter, VideoLesson, WhiteboardType } from '../../data/videoLessons/types';
+import { ExpandedWhiteboardScenes } from './ExpandedWhiteboardScenes';
 
 interface WhiteboardVisualsProps {
   chapter: VideoChapter;

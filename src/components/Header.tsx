@@ -13,12 +13,12 @@ import {
   Cpu,
   Award,
 } from 'lucide-react';
-import { YearLevel } from '../types/math.ts';
-import { mathTopics } from '../data/mathTopics.ts';
-import { AudioButton } from './AudioButton.tsx';
-import { FontSizeControl } from './FontSizeControl.tsx';
-import { FullscreenToggle } from './FullscreenToggle.tsx';
-import { soundEffects } from '../utils/soundEffects.ts';
+import { YearLevel } from '../types/math';
+import { mathTopics } from '../data/mathTopics';
+import { AudioButton } from './AudioButton';
+import { FontSizeControl } from './FontSizeControl';
+import { FullscreenToggle } from './FullscreenToggle';
+import { soundEffects } from '../utils/soundEffects';
 
 export type NavModeType = 'learn' | 'video' | 'tools' | 'assessment';
 

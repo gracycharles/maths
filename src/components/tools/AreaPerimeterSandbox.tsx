@@ -1,8 +1,8 @@
 'use client';
 
 import React, { useState } from 'react';
-import { MathView } from '../MathView.tsx';
-import { ReadableCard } from '../ReadableCard.tsx';
+import { MathView } from '../MathView';
+import { ReadableCard } from '../ReadableCard';
 
 export const AreaPerimeterSandbox: React.FC = () => {
   const [shape, setShape] = useState<'rectangle' | 'triangle' | 'parallelogram'>('rectangle');

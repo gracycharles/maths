@@ -1,10 +1,10 @@
 'use client';
 
 import React, { useState } from 'react';
-import { MathView } from '../MathView.tsx';
+import { MathView } from '../MathView';
 import { Sparkles, Info, CheckCircle2, RotateCcw } from 'lucide-react';
-import { ReadableCard } from '../ReadableCard.tsx';
-import { AudioButton } from '../AudioButton.tsx';
+import { ReadableCard } from '../ReadableCard';
+import { AudioButton } from '../AudioButton';
 
 const MIN_VAL = 1;
 const MAX_VAL = 12; // Gold standard primary KS2 bar model ceiling to prevent overflow and distortion

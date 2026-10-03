@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useState } from 'react';
-import { ReadableCard } from '../ReadableCard.tsx';
+import { ReadableCard } from '../ReadableCard';
 
 export const AnglesExplorer: React.FC = () => {
   const [angleDeg, setAngleDeg] = useState<number>(65);

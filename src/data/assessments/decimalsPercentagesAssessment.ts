@@ -1,4 +1,4 @@
-import { TopicAssessment } from '../../types/assessment.ts';
+import { TopicAssessment } from '../../types/assessment';
 
 export const decimalsPercentagesAssessment: TopicAssessment = {
   topicId: 'decimals-and-percentages',

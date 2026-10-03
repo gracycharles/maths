@@ -1,4 +1,4 @@
-import { MathTopic } from '../../types/math.ts';
+import { MathTopic } from '../../types/math';
 
 export const measurementUnitsTopic: MathTopic = {
   id: 'units-of-measurement',

@@ -1,8 +1,8 @@
-import { MathTopic } from '../types/math.ts';
-import { ratioTopic } from './topics/ratioTopic.ts';
-import { algebraTopic } from './topics/algebraTopic.ts';
-import { measurementUnitsTopic } from './topics/measurementUnitsTopic.ts';
-import { wordProblemsTopic } from './topics/wordProblemsTopic.ts';
+import { MathTopic } from '../types/math';
+import { ratioTopic } from './topics/ratioTopic';
+import { algebraTopic } from './topics/algebraTopic';
+import { measurementUnitsTopic } from './topics/measurementUnitsTopic';
+import { wordProblemsTopic } from './topics/wordProblemsTopic';
 
 const rawMathTopics: MathTopic[] = [
   {

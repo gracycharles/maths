@@ -2,7 +2,7 @@
 
 import React, { useEffect, useState } from 'react';
 import { Volume2, Square } from 'lucide-react';
-import { audioSpeech } from '../utils/audioSpeech.ts';
+import { audioSpeech } from '../utils/audioSpeech';
 
 interface AudioButtonProps {
   id: string;

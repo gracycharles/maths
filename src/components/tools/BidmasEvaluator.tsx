@@ -1,9 +1,9 @@
 'use client';
 
 import React, { useState } from 'react';
-import { MathView } from '../MathView.tsx';
+import { MathView } from '../MathView';
 import { CheckCircle } from 'lucide-react';
-import { ReadableCard } from '../ReadableCard.tsx';
+import { ReadableCard } from '../ReadableCard';
 
 export const BidmasEvaluator: React.FC = () => {
   const [selectedExample, setSelectedExample] = useState<number>(0);

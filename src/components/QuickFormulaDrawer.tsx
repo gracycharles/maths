@@ -2,10 +2,10 @@
 
 import React, { useState } from 'react';
 import { X, Search, Award } from 'lucide-react';
-import { mathTopics } from '../data/mathTopics.ts';
-import { MathView } from './MathView.tsx';
-import { ReadableCard } from './ReadableCard.tsx';
-import { AudioButton } from './AudioButton.tsx';
+import { mathTopics } from '../data/mathTopics';
+import { MathView } from './MathView';
+import { ReadableCard } from './ReadableCard';
+import { AudioButton } from './AudioButton';
 
 interface QuickFormulaDrawerProps {
   isOpen: boolean;

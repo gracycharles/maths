@@ -25,27 +25,27 @@ import {
   Video,
   Play,
 } from 'lucide-react';
-import { MathTopic } from '../types/math.ts';
-import { MathView } from './MathView.tsx';
-import { ReadableCard } from './ReadableCard.tsx';
-import { AudioButton } from './AudioButton.tsx';
-import { FractionsVisualizer } from './tools/FractionsVisualizer.tsx';
-import { BidmasEvaluator } from './tools/BidmasEvaluator.tsx';
-import { AnglesExplorer } from './tools/AnglesExplorer.tsx';
-import { AreaPerimeterSandbox } from './tools/AreaPerimeterSandbox.tsx';
-import { RomanNumeralsConverter } from './tools/RomanNumeralsConverter.tsx';
-import { PlaceValueSandbox } from './tools/PlaceValueSandbox.tsx';
-import { DecimalsPercentagesConverter } from './tools/DecimalsPercentagesConverter.tsx';
-import { FactorsMultiplesLaboratory } from './tools/FactorsMultiplesLaboratory.tsx';
-import { AveragesDataStudio } from './tools/AveragesDataStudio.tsx';
-import { CoordinatesTransformStudio } from './tools/CoordinatesTransformStudio.tsx';
-import { AssessmentView } from './AssessmentView.tsx';
-import { getAssessmentForTopic } from '../data/assessments/index.ts';
-import { VideoTutoringClip } from './video/VideoTutoringClip.tsx';
-import { hasVideoLesson, getVideoLessonForTopic } from '../data/videoLessons/index.ts';
-import { ConceptExplainerCard } from './ConceptExplainerCard.tsx';
-import { soundEffects } from '../utils/soundEffects.ts';
-import { triggerCelebrationConfetti, getAppreciationMessage, AppreciationMessage } from '../utils/celebrationEffects.ts';
+import { MathTopic } from '../types/math';
+import { MathView } from './MathView';
+import { ReadableCard } from './ReadableCard';
+import { AudioButton } from './AudioButton';
+import { FractionsVisualizer } from './tools/FractionsVisualizer';
+import { BidmasEvaluator } from './tools/BidmasEvaluator';
+import { AnglesExplorer } from './tools/AnglesExplorer';
+import { AreaPerimeterSandbox } from './tools/AreaPerimeterSandbox';
+import { RomanNumeralsConverter } from './tools/RomanNumeralsConverter';
+import { PlaceValueSandbox } from './tools/PlaceValueSandbox';
+import { DecimalsPercentagesConverter } from './tools/DecimalsPercentagesConverter';
+import { FactorsMultiplesLaboratory } from './tools/FactorsMultiplesLaboratory';
+import { AveragesDataStudio } from './tools/AveragesDataStudio';
+import { CoordinatesTransformStudio } from './tools/CoordinatesTransformStudio';
+import { AssessmentView } from './AssessmentView';
+import { getAssessmentForTopic } from '../data/assessments/index';
+import { VideoTutoringClip } from './video/VideoTutoringClip';
+import { hasVideoLesson, getVideoLessonForTopic } from '../data/videoLessons/index';
+import { ConceptExplainerCard } from './ConceptExplainerCard';
+import { soundEffects } from '../utils/soundEffects';
+import { triggerCelebrationConfetti, getAppreciationMessage, AppreciationMessage } from '../utils/celebrationEffects';
 
 interface TopicDetailProps {
   topic: MathTopic;

@@ -2,20 +2,20 @@
 
 import React, { useState, useMemo, useEffect } from 'react';
 import { PanelLeftOpen } from 'lucide-react';
-import { mathTopics } from './data/mathTopics.ts';
-import { CategoryId, YearLevel } from './types/math.ts';
-import { Header, NavModeType } from './components/Header.tsx';
-import { Sidebar } from './components/Sidebar.tsx';
-import { TopicDetail } from './components/TopicDetail.tsx';
-import { AssessmentView } from './components/AssessmentView.tsx';
-import { QuickFormulaDrawer } from './components/QuickFormulaDrawer.tsx';
-import { QuickSearchModal } from './components/QuickSearchModal.tsx';
-import { LevelProgressBar } from './components/LevelProgressBar.tsx';
-import { GoToTop } from './components/GoToTop.tsx';
-import { FloatingAudioController } from './components/FloatingAudioController.tsx';
-import { allAssessments, getAssessmentForTopic } from './data/assessments/index.ts';
-import { wakeLockController } from './utils/wakeLock.ts';
-import { soundEffects } from './utils/soundEffects.ts';
+import { mathTopics } from './data/mathTopics';
+import { CategoryId, YearLevel } from './types/math';
+import { Header, NavModeType } from './components/Header';
+import { Sidebar } from './components/Sidebar';
+import { TopicDetail } from './components/TopicDetail';
+import { AssessmentView } from './components/AssessmentView';
+import { QuickFormulaDrawer } from './components/QuickFormulaDrawer';
+import { QuickSearchModal } from './components/QuickSearchModal';
+import { LevelProgressBar } from './components/LevelProgressBar';
+import { GoToTop } from './components/GoToTop';
+import { FloatingAudioController } from './components/FloatingAudioController';
+import { allAssessments, getAssessmentForTopic } from './data/assessments/index';
+import { wakeLockController } from './utils/wakeLock';
+import { soundEffects } from './utils/soundEffects';
 
 export default function App() {
   const [selectedTopicId, setSelectedTopicId] = useState<string>('place-value-and-rounding');

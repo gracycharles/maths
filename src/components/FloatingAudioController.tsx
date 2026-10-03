@@ -2,7 +2,7 @@
 
 import React, { useEffect, useState } from 'react';
 import { Square, Play, Pause } from 'lucide-react';
-import { audioSpeech, AudioSpeechState } from '../utils/audioSpeech.ts';
+import { audioSpeech, AudioSpeechState } from '../utils/audioSpeech';
 
 export const FloatingAudioController: React.FC = () => {
   const [audioState, setAudioState] = useState<AudioSpeechState>(audioSpeech.getState());

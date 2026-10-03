@@ -1,4 +1,4 @@
-import { TopicAssessment } from '../../types/assessment.ts';
+import { TopicAssessment } from '../../types/assessment';
 
 export const wordProblemsAssessment: TopicAssessment = {
   topicId: 'multi-step-word-problems',

@@ -1,4 +1,4 @@
-import { VideoLesson } from './types.ts';
+import { VideoLesson } from './types';
 
 export const multiplicationFactorsLesson: VideoLesson = {
   id: 'video-multiplication-factors',

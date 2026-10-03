@@ -1,4 +1,4 @@
-import { VideoLesson } from './types.ts';
+import { VideoLesson } from './types';
 
 /* =========================================================================
  * 1. COORDINATES & REFLECTION (5-Chapter Masterclass)

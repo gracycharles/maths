@@ -28,18 +28,18 @@ import {
   Volume2,
   VolumeX,
 } from 'lucide-react';
-import { TopicAssessment, AssessmentQuestion, QuestionUserAttempt, AssessmentRecord } from '../types/assessment.ts';
-import { MathView } from './MathView.tsx';
-import { AudioButton } from './AudioButton.tsx';
-import { soundEffects } from '../utils/soundEffects.ts';
-import { triggerCelebrationConfetti, getAppreciationMessage, AppreciationMessage } from '../utils/celebrationEffects.ts';
+import { TopicAssessment, AssessmentQuestion, QuestionUserAttempt, AssessmentRecord } from '../types/assessment';
+import { MathView } from './MathView';
+import { AudioButton } from './AudioButton';
+import { soundEffects } from '../utils/soundEffects';
+import { triggerCelebrationConfetti, getAppreciationMessage, AppreciationMessage } from '../utils/celebrationEffects';
 import {
   getAssessmentRecord,
   saveAssessmentRecord,
   saveQuestionAttempt,
   resetAssessmentRecord,
   calculateAssessmentStats,
-} from '../utils/assessmentStorage.ts';
+} from '../utils/assessmentStorage';
 
 interface AssessmentViewProps {
   assessment: TopicAssessment;

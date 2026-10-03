@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-import { audioSpeech } from '../utils/audioSpeech.ts';
+import { audioSpeech } from '../utils/audioSpeech';
 
 interface ReadableCardProps {
   id: string;

@@ -1,18 +1,18 @@
-import { TopicAssessment } from '../../types/assessment.ts';
-import { placeValueAssessment } from './placeValueAssessment.ts';
-import { multiplicationAssessment } from './multiplicationAssessment.ts';
-import { fractionsAssessment } from './fractionsAssessment.ts';
-import { decimalsPercentagesAssessment } from './decimalsPercentagesAssessment.ts';
-import { bidmasAssessment } from './bidmasAssessment.ts';
-import { ratioProportionAssessment } from './ratioProportionAssessment.ts';
-import { algebraAssessment } from './algebraAssessment.ts';
-import { geometryAssessment } from './geometryAssessment.ts';
-import { areaPerimeterAssessment } from './areaPerimeterAssessment.ts';
-import { romanNumeralsAssessment } from './romanNumeralsAssessment.ts';
-import { statisticsAssessment } from './statisticsAssessment.ts';
-import { measurementUnitsAssessment } from './measurementUnitsAssessment.ts';
-import { coordinatesAssessment } from './coordinatesAssessment.ts';
-import { wordProblemsAssessment } from './wordProblemsAssessment.ts';
+import { TopicAssessment } from '../../types/assessment';
+import { placeValueAssessment } from './placeValueAssessment';
+import { multiplicationAssessment } from './multiplicationAssessment';
+import { fractionsAssessment } from './fractionsAssessment';
+import { decimalsPercentagesAssessment } from './decimalsPercentagesAssessment';
+import { bidmasAssessment } from './bidmasAssessment';
+import { ratioProportionAssessment } from './ratioProportionAssessment';
+import { algebraAssessment } from './algebraAssessment';
+import { geometryAssessment } from './geometryAssessment';
+import { areaPerimeterAssessment } from './areaPerimeterAssessment';
+import { romanNumeralsAssessment } from './romanNumeralsAssessment';
+import { statisticsAssessment } from './statisticsAssessment';
+import { measurementUnitsAssessment } from './measurementUnitsAssessment';
+import { coordinatesAssessment } from './coordinatesAssessment';
+import { wordProblemsAssessment } from './wordProblemsAssessment';
 
 export {
   placeValueAssessment,

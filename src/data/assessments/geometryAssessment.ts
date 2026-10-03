@@ -1,4 +1,4 @@
-import { TopicAssessment } from '../../types/assessment.ts';
+import { TopicAssessment } from '../../types/assessment';
 
 export const geometryAssessment: TopicAssessment = {
   topicId: 'geometry-angles-and-shapes',

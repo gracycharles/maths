@@ -1,10 +1,10 @@
 'use client';
 
 import React, { useState } from 'react';
-import { MathView } from './MathView.tsx';
+import { MathView } from './MathView';
 import { Sparkles, Grid, Box, HelpCircle, CheckCircle2, AlertCircle, RefreshCw, Volume2 } from 'lucide-react';
-import { speakMathText, isAudioSpeechActive, stopMathSpeech } from '../utils/audioSpeech.ts';
-import { playSound } from '../utils/soundEffects.ts';
+import { speakMathText, isAudioSpeechActive, stopMathSpeech } from '../utils/audioSpeech';
+import { playSound } from '../utils/soundEffects';
 
 interface ConceptExplainerCardProps {
   initialConcept?: 'prime' | 'square' | 'cube' | 'factors';

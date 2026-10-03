@@ -1,4 +1,4 @@
-import { MathTopic } from '../../types/math.ts';
+import { MathTopic } from '../../types/math';
 
 export const algebraTopic: MathTopic = {
   id: 'introduction-to-algebra',

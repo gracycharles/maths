@@ -20,11 +20,11 @@ import {
   ChevronUp,
   Sliders,
 } from 'lucide-react';
-import { getVideoLessonForTopic, VideoLesson, VideoChapter } from '../../data/videoLessons/index.ts';
-import { WhiteboardVisuals } from './WhiteboardVisuals.tsx';
-import { audioSpeech } from '../../utils/audioSpeech.ts';
-import { soundEffects } from '../../utils/soundEffects.ts';
-import { wakeLockController } from '../../utils/wakeLock.ts';
+import { getVideoLessonForTopic, VideoLesson, VideoChapter } from '../../data/videoLessons/index';
+import { WhiteboardVisuals } from './WhiteboardVisuals';
+import { audioSpeech } from '../../utils/audioSpeech';
+import { soundEffects } from '../../utils/soundEffects';
+import { wakeLockController } from '../../utils/wakeLock';
 
 interface WhiteboardErrorBoundaryProps {
   children: React.ReactNode;

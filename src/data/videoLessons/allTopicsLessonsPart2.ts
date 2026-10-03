@@ -1,4 +1,4 @@
-import { VideoLesson } from './types.ts';
+import { VideoLesson } from './types';
 
 /* =========================================================================
  * 1. INTRODUCTION TO ALGEBRA (5-Chapter Masterclass)

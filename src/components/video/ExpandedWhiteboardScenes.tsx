@@ -1,10 +1,10 @@
 'use client';
 
 import React, { useState } from 'react';
-import { MathView } from '../MathView.tsx';
+import { MathView } from '../MathView';
 import { Sparkles, Check, X, ArrowRight, RefreshCw, AlertTriangle, Box, Grid } from 'lucide-react';
-import { playSound } from '../../utils/soundEffects.ts';
-import { WhiteboardType } from '../../data/videoLessons/types.ts';
+import { playSound } from '../../utils/soundEffects';
+import { WhiteboardType } from '../../data/videoLessons/types';
 
 interface ExpandedWhiteboardScenesProps {
   type: WhiteboardType;

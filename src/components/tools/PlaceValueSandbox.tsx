@@ -1,10 +1,10 @@
 'use client';
 
 import React, { useState } from 'react';
-import { MathView } from '../MathView.tsx';
+import { MathView } from '../MathView';
 import { Sparkles, Info, RefreshCw, ArrowLeftRight, Layers } from 'lucide-react';
-import { ReadableCard } from '../ReadableCard.tsx';
-import { AudioButton } from '../AudioButton.tsx';
+import { ReadableCard } from '../ReadableCard';
+import { AudioButton } from '../AudioButton';
 
 export const PlaceValueSandbox: React.FC = () => {
   const [currentNum, setCurrentNum] = useState<number>(345.6);
