@@ -20,9 +20,9 @@ import {
   Video,
   Cpu,
 } from 'lucide-react';
-import { MathTopic, CategoryId } from '../types/math';
-import { allAssessments, getAssessmentForTopic } from '../data/assessments';
-import { getAssessmentRecord } from '../utils/assessmentStorage';
+import { MathTopic, CategoryId } from '../types/math.ts';
+import { allAssessments, getAssessmentForTopic } from '../data/assessments/index.ts';
+import { getAssessmentRecord } from '../utils/assessmentStorage.ts';
 
 export type SidebarModeType = 'learn' | 'video' | 'tools' | 'assessment';
 

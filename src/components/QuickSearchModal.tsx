@@ -2,9 +2,9 @@
 
 import React, { useState, useEffect, useRef } from 'react';
 import { Search, X, BookOpen, Award, ChevronRight } from 'lucide-react';
-import { mathTopics } from '../data/mathTopics';
-import { allAssessments } from '../data/assessments';
-import { NavModeType } from './Header';
+import { mathTopics } from '../data/mathTopics.ts';
+import { allAssessments } from '../data/assessments/index.ts';
+import { NavModeType } from './Header.tsx';
 
 interface QuickSearchModalProps {
   isOpen: boolean;

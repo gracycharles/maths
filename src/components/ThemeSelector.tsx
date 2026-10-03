@@ -2,7 +2,7 @@
 
 import React, { useState, useRef, useEffect } from 'react';
 import { Palette, Check } from 'lucide-react';
-import { usePastelTheme, PASTEL_THEMES, PastelThemeId } from '../context/ThemeContext';
+import { usePastelTheme, PASTEL_THEMES, PastelThemeId } from '../context/ThemeContext.tsx';
 
 export const ThemeSelector: React.FC = () => {
   const { theme, setTheme, currentThemeObj } = usePastelTheme();

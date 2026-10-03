@@ -2,9 +2,9 @@
 
 import React from 'react';
 import { Award, CheckCircle2, Sparkles, Trophy } from 'lucide-react';
-import { YearLevel } from '../types/math';
-import { mathTopics } from '../data/mathTopics';
-import { getAssessmentRecord } from '../utils/assessmentStorage';
+import { YearLevel } from '../types/math.ts';
+import { mathTopics } from '../data/mathTopics.ts';
+import { getAssessmentRecord } from '../utils/assessmentStorage.ts';
 
 interface LevelProgressBarProps {
   selectedYear: YearLevel | 'All';
